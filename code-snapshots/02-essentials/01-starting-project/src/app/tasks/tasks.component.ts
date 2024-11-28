@@ -10,6 +10,7 @@ import { NewTaskComponent } from "./new-task/new-task.component";
   styleUrl: './tasks.component.css',
 })
 export class TasksComponent {
+
   @Input({ required: true }) userId!: string;
   @Input({ required: true }) name!: string;
   tasks = [
@@ -49,5 +50,9 @@ export class TasksComponent {
 
   onStartAddTask() {
     this.isAddingTask = true;
+  }
+
+  onCancelAddTask() {
+    this.isAddingTask = false;  
   }
 }
